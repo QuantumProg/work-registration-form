@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGAL CRYPTO ENTERPRISES</title> 
+
+    <style>
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        /* Overall Page Styling */
+        body {
+            background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHdvcmtpbmclMjB0ZWFtfGVufDB8fDB8fHww') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Table (Form container) */
+        table {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent for readability */
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            border-collapse: collapse;
+            padding: 0;
+        }
+
+        /* Header and Title Styling */
+        h1, h3 {
+            color: #2c3e50;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Form Fields Styling */
+        label {
+            font-weight: 500;
+        }
+
+        select, input[type="text"], input[type="email"], input[type="tel"], input[type="date"], input[type="password"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        /* Focus effects */
+        select:focus, input:focus, textarea:focus {
+            border-color: #2980b9;
+            outline: none;
+        }
+
+        /* Submit and Reset Buttons */
+        input[type="submit"], input[type="reset"] {
+            background-color: #2980b9;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #3498db;
+        }
+
+        input[type="checkbox"], input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            table {
+                width: 95%;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            input, select, textarea {
+                font-size: 13px;
+            }
+
+            input[type="submit"], input[type="reset"] {
+                width: 100%;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+</head>
+<body bgcolor="#f0f2f5">
+    <center>
+        <table bgcolor="white" width="600" cellpadding="20" cellspacing="0" style="border-collapse: collapse;">
+            <tr>
+                <td>
+                    <h1 align="center">Work Registration Form</h1>
+                    <p align="center"><font color="red">* Required fields</font></p>
+                    <hr color="#cccccc" size="1">
+                    <br>
+                    
+                    <form method="post" action="/submit" enctype="multipart/form-data">
+                        <table width="100%" cellpadding="5">
+                            <!-- Personal Information Section -->
+                            <tr>
+                                <td colspan="2">
+                                    <h3>Personal Information</h3>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td width="30%"><label for="title">Title:</label></td>
+                                <td>
+                                    <select id="title" name="title">
+                                        <option value="">Select Title</option>
+                                        <option value="mr">Mr.</option>
+                                        <option value="mrs">Mrs.</option>
+                                        <option value="ms">Ms.</option>
+                                        <option value="dr">Dr.</option>
+                                        <option value="prof">Prof.</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="firstName">First Name: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="firstName" 
+                                        name="firstName" 
+                                        size="40" 
+                                        required 
+                                        pattern="[A-Za-z\s]+"
+                                        title="Please enter only letters and spaces"
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="middleName">Middle Name:</label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="middleName" 
+                                        name="middleName" 
+                                        size="40" 
+                                        pattern="[A-Za-z\s]+"
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="lastName">Last Name: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="lastName" 
+                                        name="lastName" 
+                                        size="40" 
+                                        required 
+                                        pattern="[A-Za-z\s]+"
+                                    >
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><label for="email">Email Address: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email" 
+                                        size="40" 
+                                        required
+                                        placeholder="example@domain.com"
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="confirmEmail">Confirm Email: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="email" 
+                                        id="confirmEmail" 
+                                        name="confirmEmail" 
+                                        size="40" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="dob">Date of Birth: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="date" 
+                                        id="dob" 
+                                        name="dob" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="phone">Phone Number: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="tel" 
+                                        id="phone" 
+                                        name="phone" 
+                                        size="40" 
+                                        required
+                                        pattern="[0-9\-\+\s]+"
+                                        title="Please enter a valid phone number"
+                                        placeholder="e.g., +1-234-567-8900"
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="altPhone">Alternative Phone:</label></td>
+                                <td>
+                                    <input 
+                                        type="tel" 
+                                        id="altPhone" 
+                                        name="altPhone" 
+                                        size="40" 
+                                        pattern="[0-9\-\+\s]+"
+                                    >
+                                </td>
+                            </tr>
+
+                            <!-- Address Section -->
+                            <tr>
+                                <td colspan="2">
+                                    <br>
+                                    <h3>Address Information</h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="street">Street Address: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="street" 
+                                        name="street" 
+                                        size="40" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="city">City: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="city" 
+                                        name="city" 
+                                        size="40" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="state">State/Province: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="state" 
+                                        name="state" 
+                                        size="40" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="zipcode">Zip/Postal Code: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="zipcode" 
+                                        name="zipcode" 
+                                        size="10" 
+                                        required
+                                        pattern="[0-9\-]+"
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="country">Country: <font color="red">*</font></label></td>
+                                <td>
+                                    <select id="country" name="country" required>
+                                        <option value="">Select Country</option>
+                                        <option value="us">United States</option>
+                                        <option value="ca">Canada</option>
+                                        <option value="uk">United Kingdom</option>
+                                        <option value="au">Australia</option>
+                                        <!-- Add more countries as needed -->
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <!-- Account Information Section -->
+                            <tr>
+                                <td colspan="2">
+                                    <br>
+                                    <h3>Account Information</h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="username">Username: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="username" 
+                                        name="username" 
+                                        size="40" 
+                                        required
+                                        minlength="5"
+                                        maxlength="20"
+                                        pattern="[A-Za-z0-9_]+"
+                                        title="Username can only contain letters, numbers, and underscores"
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="password">Password: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="password" 
+                                        id="password" 
+                                        name="password" 
+                                        size="40" 
+                                        required
+                                        minlength="8"
+                                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}"
+                                        title="Must contain at least one number, uppercase letter, lowercase letter, special character, and be at least 8 characters long"
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="confirmPassword">Confirm Password: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="password" 
+                                        id="confirmPassword" 
+                                        name="confirmPassword" 
+                                        size="40" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="securityQuestion">Security Question: <font color="red">*</font></label></td>
+                                <td>
+                                    <select id="securityQuestion" name="securityQuestion" required>
+                                        <option value="">Select a Security Question</option>
+                                        <option value="pet">What was your first pet's name?</option>
+                                        <option value="school">What elementary school did you attend?</option>
+                                        <option value="city">In what city were you born?</option>
+                                        <option value="mother">What is your mother's maiden name?</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="securityAnswer">Security Answer: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="securityAnswer" 
+                                        name="securityAnswer" 
+                                        size="40" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <!-- Professional Information -->
+                            <tr>
+                                <td colspan="2">
+                                    <br>
+                                    <h3>Professional Information</h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="department">Department: <font color="red">*</font></label></td>
+                                <td>
+                                    <select id="department" name="department" required>
+                                        <option value="">Select Department</option>
+                                        <option value="engineering">Engineering</option>
+                                        <option value="marketing">Marketing</option>
+                                        <option value="finance">Finance</option>
+                                        <option value="hr">Human Resources</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="position">Position: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="text" 
+                                        id="position" 
+                                        name="position" 
+                                        size="40" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="startDate">Start Date: <font color="red">*</font></label></td>
+                                <td>
+                                    <input 
+                                        type="date" 
+                                        id="startDate" 
+                                        name="startDate" 
+                                        required
+                                    >
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="employmentType">Employment Type: <font color="red">*</font></label></td>
+                                <td>
+                                    <select id="employmentType" name="employmentType" required>
+                                        <option value="">Select Type</option>
+                                        <option value="fulltime">Full Time</option>
+                                        <option value="parttime">Part Time</option>
+                                        <option value="contract">Contract</option>
+                                        <option value="intern">Intern</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="resume">Resume/CV:</label></td>
+                                <td>
+                                    <input 
+                                        type="file" 
+                                        id="resume" 
+                                        name="resume"
+                                        accept=".pdf,.doc,.docx"
+                                    >
+                                    <br>
+                                    <font size="2" color="#666666">Accepted formats: PDF, DOC, DOCX</font>
+                                </td>
+                            </tr>
+
+                            <!-- Additional Information -->
+                            <tr>
+                                <td colspan="2">
+                                    <br>
+                                    <h3>Additional Information</h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label>Skills:</label></td>
+                                <td>
+                                    <input type="checkbox" id="skill1" name="skills" value="leadership">
+                                    <label for="skill1">Leadership</label>
+                                    &nbsp;&nbsp;
+                                    <input type="checkbox" id="skill2" name="skills" value="communication">
+                                    <label for="skill2">Communication</label>
+                                    &nbsp;&nbsp;
+                                    <input type="checkbox" id="skill3" name="skills" value="teamwork">
+                                    <label for="skill3">Teamwork</label>
+                                    &nbsp;&nbsp;
+                                    <input type="checkbox" id="skill4" name="skills" value="problemsolving">
+                                    <label for="skill4">Problem Solving</label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="languages">Languages Known:</label></td>
+                                <td>
+                                    <select id="languages" name="languages" multiple size="4">
+                                        <option value="english">English</option>
+                                        <option value="spanish">Spanish</option>
+                                        <option value="french">French</option>
+                                        <option value="german">German</option>
+                                        <option value="chinese">Chinese</option>
+                                        <option value="japanese">Japanese</option>
+                                    </select>
+                                    <br>
+                                      <!-- Additional Details Section -->
+                            <tr>
+                                <td colspan="2">
+                                    <br>
+                                    <h3>Additional Details</h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="department">Department:</label></td>
+                                <td>
+                                    <select id="department" name="department" required>
+                                        <option value="">Select Department</option>
+                                        <option value="engineering">Engineering</option>
+                                        <option value="marketing">Marketing</option>
+                                        <option value="finance">Finance</option>
+                                        <option value="hr">Human Resources</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="gender">Gender:</label></td>
+                                <td>
+                                    <input type="radio" id="male" name="gender" value="male" required>
+                                    <label for="male">Male</label>
+                                    &nbsp;&nbsp;
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">Female</label>
+                                    &nbsp;&nbsp;
+                                    <input type="radio" id="other" name="gender" value="other">
+                                    <label for="other">Other</label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="interests">Interests:</label></td>
+                                <td>
+                                    <input type="checkbox" id="tech" name="interests" value="technology">
+                                    <label for="tech">Technology</label>
+                                    &nbsp;&nbsp;
+                                    <input type="checkbox" id="design" name="interests" value="design">
+                                    <label for="design">Design</label>
+                                    &nbsp;&nbsp;
+                                    <input type="checkbox" id="business" name="interests" value="business">
+                                    <label for="business">Business</label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="bio">Brief Bio:</label></td>
+                                <td>
+                                    <textarea 
+                                        id="bio" 
+                                        name="bio" 
+                                        rows="4" 
+                                        cols="42" 
+                                        maxlength="500"
+                                        placeholder="Tell us about yourself..."
+                                    ></textarea>
+                                </td>
+                            </tr>
+
+                            <!-- Submit Section -->
+                            <tr>
+                                <td colspan="2" align="center">
+                                    <br>
+                                    <hr color="#cccccc" size="1">
+                                    <br>
+                                    <input type="submit" value="Submit Registration">
+                                    &nbsp;&nbsp;
+                                    <input type="reset" value="Clear Form">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <font color="#666666" size="2">© 2024 Regal Crypto Enterprises. All rights reserved.</font>
+    </center>
+</body>
+</html>
